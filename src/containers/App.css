@@ -1,0 +1,400 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+}
+
+.text-orange {
+    color: #EE5A2D;
+}
+
+.bg-orange {
+    color: #fff;
+    background: #EE5A2D;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.btn-outline-orange {
+    background: transparent;
+    border: 1px solid #EE5A2D;
+    color: #EE5A2D;
+}
+
+.btn-outline-orange:hover {
+    background: #EE5A2D;
+}
+
+a,
+a:link {
+    color: #EE5A2D;
+    /*text-decoration: none;
+    border-bottom: 1px dotted #EE5A2D;*/
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    cursor: pointer;
+    color: black;
+}
+
+a:active {
+    color: gray;
+}
+
+.main-header {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 32px 12px 32px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.head {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    width: 125px;
+    height: 83px;
+    object-fit: contain;
+}
+
+.contact {
+    margin-right: 32px;
+}
+
+.contact li {
+    float: right;
+}
+
+.btn {
+    border-radius: 60px;
+    align-items: center;
+    text-align: center;
+}
+
+.main-section {
+    height: 1142px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1543274511-628d791f4059?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80") no-repeat top center;
+    background-size: cover;
+    padding-top: 460px;
+    padding-left: 180px;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 32px;
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 22px;
+}
+
+h3 {
+    margin-bottom: 54px;
+}
+
+h6 {
+    margin: 20px auto 20px auto;
+}
+
+.btn-text {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.events p,
+.main-block p {
+    font-size: 22px;
+}
+
+.icons {
+    height: 460px;
+    display: flex;
+    align-items: center;
+}
+
+.icons img {
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.announcements {
+    margin: 32px;
+}
+
+.announcements .row {
+    margin: auto 0 auto 0;
+}
+
+.announcements .contents {
+    display: flex;
+    align-items: initial;
+}
+
+.announcements .section-container {
+    height: 136px;
+    padding-left: 62px;
+    margin: 0 auto 62px 0;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.news-card {
+    padding: 62px;
+    border: 1px solid #BDBABA;
+}
+
+.mr {
+    margin-right: 18px;
+}
+
+.ml {
+    margin-left: 18px;
+}
+
+.news-date {
+    margin-bottom: 32px;
+}
+
+.news-img {
+    width: 100%;
+    height: 260;
+    object-fit: cover;
+    background: #999;
+    margin-bottom: 62px;
+}
+
+.events {
+    margin: 0 32px 0 32px;
+}
+
+.events p {
+    margin-bottom: 86px;
+}
+
+.document {
+    height: 300px;
+    margin: 0 32px 32px 32px;
+    padding: 54px;
+    background: url("https://images.unsplash.com/photo-1543274511-628d791f4059?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.document .btn-white {
+    border-radius: 60px;
+    background: white;
+    color: black;
+}
+
+.logos {
+    margin: 136px 0 136px 0;
+    padding: 90px 0 90px 0;
+}
+
+.graduates {
+    margin-bottom: 136px;
+    padding: 54px 0 54px 0;
+    background: #F1F1F1;
+}
+
+.infographics {
+    margin-bottom: 136px;
+}
+
+.infographics img {
+    width: 230px;
+    height: 279px;
+    object-fit: contain;
+    margin: 25px auto 25px auto;
+}
+
+.progress {
+    border-radius: 15px;
+}
+
+.managers {
+    margin-bottom: 136px;
+    padding-top: 53px;
+}
+
+.main-footer {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #555;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    text-align: center;
+}
+
+.grad-card {
+    margin: 20px 20px 20px 20px;
+    padding: 0 30px 0 30px;
+}
+
+.grad-name,
+.grad-desc {
+    max-width: 315px;
+}
+
+.graduates-carousel .slick-prev {
+    z-index: 10;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: white !important;
+    box-shadow: 8px rgba(0, 0, 0, 0.2);
+}
+
+.graduates-carousel .slick-next {
+    z-index: 10;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: white !important;
+    box-shadow: 8px rgba(0, 0, 0, 0.2);
+}
+
+.graduates-carousel .slick-prev::before {
+    z-index: 20;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    content: "<";
+    color: black;
+}
+
+.graduates-carousel .slick-next::before {
+    z-index: 20;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    content: ">";
+    color: black;
+}
+
+.slick-dots li {
+    margin: 0 0 !important;
+}
+
+.icons-carousel .slick-dots .slick-active button::before {
+    color: #EE5A2D !important;
+}
+
+.grad-img {
+    width: 315px;
+    height: 246px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-columns {
+    column-count: 4;
+}
+
+.managers .card {
+    margin: 16px;
+    padding: 32px;
+    border: rgba(0, 0, 0, 0);
+}
+
+.card-img-top {
+    width: 176px;
+    height: 176px;
+    object-fit: cover;
+    background: gray;
+}
+
+.card-columns .card {
+    display: inline-block;
+}
+
+.main-block {
+    margin: 200px 186px 64px 186px;
+}
+
+.show-btns {
+    margin: 125px auto 0 auto;
+}
+
+.table-section {
+    margin: 0 32px 32px 32px;
+}
+
+.table {
+    background: #F1F1F1;
+    border: rgba(0, 0, 0, 0);
+}
+
+thead th {
+    border: rgba(0, 0, 0, 0);
+}
+
+.table th,
+.table td {
+    padding: 51px 65px 51px 65px;
+}
+
+.dropdown-menu {
+    margin-top: 20px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    right: 100%;
+    margin-top: -6px;
+    box-shadow: 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+#learn-dropdown1 .dropdown-menu {
+    min-width: 300px;
+    padding: 65px 32px 65px 32px;
+}
+
+#learn-dropdown1 ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#learn-dropdown1 li {
+    margin: auto auto 20px auto;
+}
+
+#program-info .table th,
+.table td {
+    padding: 20px 65px 20px 65px;
+}

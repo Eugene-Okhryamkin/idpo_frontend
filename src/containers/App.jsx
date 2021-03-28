@@ -1,8 +1,17 @@
 import React from "react";
-import "./App.sass";
+import 'regenerator-runtime/runtime';
+import Header from "Components/Header/Header.jsx";
+import Main from "Components/Main/Main.jsx";
+import Footer from "Components/Footer/Footer.jsx";
+import "./App.css";
+
 
 const App = () => (
-    <h1>Hello, world</h1>
+    <>
+        <Header />
+        <Main />
+        <Footer />
+    </>
 );
 
 export default App;

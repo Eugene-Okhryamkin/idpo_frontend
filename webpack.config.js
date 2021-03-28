@@ -15,6 +15,17 @@ module.exports = {
         filename: "bundle.min.js",
         publicPath: "/"
     },
+
+    resolve: {
+        alias: {
+            Components: path.resolve(__dirname, "src/components"),
+            Containers: path.resolve(__dirname, "src/containers"),
+            Reducers: path.resolve(__dirname, "src/reducers"),
+            Actions: path.resolve(__dirname, "src/actions"),
+            Pages: path.resolve(__dirname, "src/pages")
+        }
+    },
+
     module: {
         rules: [
             {
@@ -57,6 +68,7 @@ module.exports = {
         port: 8000,
         hot: true,
         overlay: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        
     }
 };
