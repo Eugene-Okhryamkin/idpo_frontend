@@ -5,13 +5,7 @@ const LearnTableContainer = () => {
 
     useEffect(() => {
         async function fetchData() {
-            let response = await fetch("http://194.67.116.27:8080/api/get_program_list", {
-                method: "GET",
-                mode: "no-cors",
-                "Access-Control-Allow-Origin" : "*",
-                "Access-Control-Allow-Credentials" : true,
-                "Content-Type": "application/json"
-            });
+            let response = await fetch("http://194.67.116.27:8080/api/get_program_list");
             response = await response.json();
             setLearnData(response);
         }
