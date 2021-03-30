@@ -19,7 +19,7 @@ const NewsContainer = () => {
             return newsData.map((item, index) => {
                 return <NewsComponentItem
                     key={index}
-                    //imgSrs={item.img-src}
+                    imgSrs={item.imgSrc}
                     title={item.title}
                     text={item.text}
                     url={item.url}

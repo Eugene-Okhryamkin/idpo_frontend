@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 const MainSection = () => (
     <section className="main-section">
@@ -9,7 +10,7 @@ const MainSection = () => (
             <h3 className="text-white">C Институтом Дополнительного Профессионального Образования</h3>
         </div>
         <div>
-            <a className="btn bg-orange px-5">Изучить</a>
+            <NavLink className="btn bg-orange px-5" to="/learn">Изучить</NavLink>
         </div>
     </section>
 );

@@ -1,7 +1,18 @@
 import React, {useEffect, useState} from "react";
+import {NavLink} from "react-router-dom";
+import {setId} from "Actions/getInfoByIDAction.js";
+import { connect } from "react-redux";
+import propTypes from "prop-types";
 
-const LearnTableContainer = () => {
+const mapDispatchToProps = dispatch => {
+    return {
+        setId: id => dispatch(setId(id))
+    }
+}
+
+const LearnTableContainer = props => {
     const [learnData, setLearnData] = useState([]);
+    const { setId } = props;
 
     useEffect(() => {
         async function fetchData() {
@@ -11,7 +22,11 @@ const LearnTableContainer = () => {
         }
 
         fetchData();
-    })
+    }, [])
+
+    const setInfoByID = id => {
+        setId(id);
+    }
 
     const renderTable = () => {
         if(learnData.length) {
@@ -19,7 +34,7 @@ const LearnTableContainer = () => {
                 return (
                     <tr key={index}>
                         <th>{item.name}</th>
-                        <td><a href="#" className="text-orange">{item.audienceCategory}</a></td>
+                        <td><NavLink to="/info" className="text-orange" onClick={() => setInfoByID(item.id)}>{item.audienceCategory}</NavLink></td>
                         <td>{item.formTraining}</td>
                         <td>{item.duration}</td>
                     </tr>
@@ -37,4 +52,8 @@ const LearnTableContainer = () => {
     )
 };
 
-export default LearnTableContainer;
+LearnTableContainer.propTypes = {
+    setId: propTypes.func.isRequired
+}
+
+export default connect(null, mapDispatchToProps)(LearnTableContainer);

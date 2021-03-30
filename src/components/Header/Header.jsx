@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 const Header = () => (
     <header className="main-header bg-white">
@@ -8,7 +9,7 @@ const Header = () => (
         </ul>
         <ul className="head">
             <li className="">+7 (473) 255-04-81<br />+7 (473) 252-45-34</li>
-            <li><a className="btn bg-orange mx-5 px-5">Изучить</a></li>
+            <li><NavLink className="btn bg-orange mx-5 px-5" to="/learn">Изучить</NavLink></li>
         </ul>
     </header>
 );

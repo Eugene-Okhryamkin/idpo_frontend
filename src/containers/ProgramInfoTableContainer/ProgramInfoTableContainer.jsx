@@ -1,11 +1,18 @@
 import React, {useEffect, useState} from "react";
+import {connect} from "react-redux";
+import propTypes from "prop-types";
 
-const ProgramInfoTableContainer = () => {
+const mapStateToProps = state => ({
+    id: state.info.id
+})
+
+const ProgramInfoTableContainer = props => {
     const [programInfo, setProgramInfo] = useState({});
+    const {id} = props
 
     useEffect(() => {
         async function fetchData() {
-            let response = await fetch(`http://194.67.116.27:8080/api/get_program_info?id=1`);
+            let response = await fetch(`http://194.67.116.27:8080/api/get_program_info?id=${id}`);
             response = await response.json();
             setProgramInfo(response);
         }
@@ -84,5 +91,9 @@ const ProgramInfoTableContainer = () => {
     )
 };
 
+ProgramInfoTableContainer.propTypes = {
+    id: propTypes.number.isRequired
+}
 
-export default ProgramInfoTableContainer;
+
+export default connect(mapStateToProps, null)(ProgramInfoTableContainer);
