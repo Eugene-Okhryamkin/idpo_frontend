@@ -8,6 +8,7 @@ const InfoPage = () => (
         <MainBlockSection />
         <ProgramInfoSection />
         <DocumentSection />
+
     </>
 )
 

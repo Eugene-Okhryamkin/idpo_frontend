@@ -21,6 +21,8 @@ const ProgramInfoTableContainer = props => {
 
     }, [])
 
+
+    console.log(programInfo);
     const renderTable = () => {
         if(Object.keys(programInfo).length) {
             return (
@@ -31,17 +33,21 @@ const ProgramInfoTableContainer = props => {
                     </tr>
                     <tr>
                         <th>Вид программы</th>
-                        <td>{programInfo.programType}</td>
+                        <td>{programInfo.programType.name}</td>
                     </tr>
                     <tr>
                         <th>Направление программы</th>
-                        <td>{programInfo.programDirection}</td>
+                        <td>{programInfo.programDirection.name}</td>
 
                     </tr>
                     <tr>
                         <th>Группа программы</th>
                         <td>{programInfo.programGroup}</td>
 
+                    </tr>
+                    <tr>
+                        <th>Подразделение</th>
+                        <td>{programInfo.programSeparation.name}</td>
                     </tr>
                     <tr>
                         <th>Форма обучения</th>

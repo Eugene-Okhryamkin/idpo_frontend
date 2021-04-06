@@ -33,8 +33,9 @@ const LearnTableContainer = props => {
             return learnData.map((item, index) => {
                 return (
                     <tr key={index}>
-                        <th>{item.name}</th>
-                        <td><NavLink to="/info" className="text-orange" onClick={() => setInfoByID(item.id)}>{item.audienceCategory}</NavLink></td>
+                        <th>{item.programGroup}</th>
+                        <th><NavLink to="/info" className="text-orange" onClick={() => setInfoByID(item.id)}>{item.name}</NavLink></th>
+                        {/*<td>{item.audienceCategory}</td>*/}
                         <td>{item.formTraining}</td>
                         <td>{item.duration}</td>
                     </tr>

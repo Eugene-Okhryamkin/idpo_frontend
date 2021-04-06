@@ -398,3 +398,7 @@ thead th {
 .table td {
     padding: 20px 65px 20px 65px;
 }
+
+.slick-track {
+    display: flex;
+}
