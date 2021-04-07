@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 
 const ProgramInfoTableContainer = props => {
     const [programInfo, setProgramInfo] = useState({});
-    const {id} = props
+    const {id} = props;
+
 
     useEffect(() => {
         async function fetchData() {
@@ -19,12 +20,14 @@ const ProgramInfoTableContainer = props => {
 
         fetchData();
 
+
     }, [])
 
 
-    console.log(programInfo);
+
     const renderTable = () => {
         if(Object.keys(programInfo).length) {
+            console.log(programInfo);
             return (
                 <>
                     <tr>
@@ -98,7 +101,7 @@ const ProgramInfoTableContainer = props => {
 };
 
 ProgramInfoTableContainer.propTypes = {
-    id: propTypes.number.isRequired
+    id: propTypes.string.isRequired
 }
 
 
