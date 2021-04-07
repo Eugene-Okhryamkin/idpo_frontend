@@ -6,7 +6,7 @@ const EventsContainer = () => {
 
     useEffect(() => {
         async function fetchData() {
-            let response = await fetch("https://virtserver.swaggerhub.com/Happyer29/IDPO/1.0.0/get_events");
+            let response = await fetch("http://194.67.116.27:8080/api/get_events");
             response = await response.json();
             setEventData(response);
         }
