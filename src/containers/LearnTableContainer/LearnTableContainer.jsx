@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {NavLink} from "react-router-dom";
+// import {NavLink} from "react-router-dom";
 import {setId} from "Actions/getInfoByIDAction.js";
 import { connect } from "react-redux";
 import propTypes from "prop-types";
+import {useHistory} from "react-router";
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -13,6 +14,7 @@ const mapDispatchToProps = dispatch => {
 const LearnTableContainer = props => {
     const [learnData, setLearnData] = useState([]);
     const { setId } = props;
+    const history = useHistory();
 
     useEffect(() => {
         async function fetchData() {
@@ -26,6 +28,7 @@ const LearnTableContainer = props => {
 
     const setInfoByID = id => {
         setId(id);
+        history.push(`/info/ + ${id}`);
     }
 
     const renderTable = () => {
@@ -34,7 +37,7 @@ const LearnTableContainer = props => {
                 return (
                     <tr key={index}>
                         <th>{item.programGroup}</th>
-                        <th><NavLink to="/info" className="text-orange" onClick={() => setInfoByID(item.id)}>{item.name}</NavLink></th>
+                        <th className="text-orange" onClick={() => setInfoByID(item.id)} style={{cursor: "pointer"}}>{item.name}</th>
                         {/*<td>{item.audienceCategory}</td>*/}
                         <td>{item.formTraining}</td>
                         <td>{item.duration}</td>
