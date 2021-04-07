@@ -28,7 +28,7 @@ const LearnTableContainer = props => {
 
     const setInfoByID = id => {
         setId(id);
-        history.push(`/info/ + ${id}`);
+        history.push(`info/${id}`);
     }
 
     const renderTable = () => {

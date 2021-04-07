@@ -27,7 +27,6 @@ const ProgramInfoTableContainer = props => {
 
     const renderTable = () => {
         if(Object.keys(programInfo).length) {
-            console.log(programInfo);
             return (
                 <>
                     <tr>
