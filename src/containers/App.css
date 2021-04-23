@@ -243,16 +243,63 @@ h6 {
     padding-top: 53px;
 }
 
+.pre-footer .row {
+    margin: 0;
+}
+
+.pre-footer {
+    width: 100%;
+    padding-top: 87px;
+    padding-bottom: 87px;
+    background: linear-gradient(0deg, rgba(34, 34, 34, 0.68), rgba(34, 34, 34, 0.68)), url("https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80") no-repeat top center;
+    background-size: cover;
+    color: white;
+}
+
+.pre-footer p {
+    padding: 0 32px 0 32px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.map-col {
+    padding: 0;
+}
+
+.map img {
+    width: 100%;
+    height: 424px;
+    object-fit: cover;
+}
+
 .main-footer {
     position: static;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #555;
+    background: #161616;
     padding-top: 12px;
     padding-bottom: 12px;
     color: white;
     text-align: center;
+}
+
+.logos ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.icons-dots li a {
+    margin: 10px 5px 10px 5px;
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    color: lightgray;
+}
+
+.icons-dots li a:active {
+    color: #EE5A2D;
 }
 
 .grad-card {
@@ -265,8 +312,13 @@ h6 {
     max-width: 315px;
 }
 
-.graduates-carousel .slick-prev {
+.graduates .row {
+    display: flex;
+}
+
+.graduates .arrow .btn {
     z-index: 10;
+    margin-top: 200px;
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -274,37 +326,13 @@ h6 {
     box-shadow: 8px rgba(0, 0, 0, 0.2);
 }
 
-.graduates-carousel .slick-next {
-    z-index: 10;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: white !important;
-    box-shadow: 8px rgba(0, 0, 0, 0.2);
-}
-
-.graduates-carousel .slick-prev::before {
-    z-index: 20;
-    font-family: 'Montserrat', sans-serif;
+.graduates .arrow a {
+    padding-top: 14px;
     font-weight: 900;
-    content: "<";
-    color: black;
 }
 
-.graduates-carousel .slick-next::before {
-    z-index: 20;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    content: ">";
-    color: black;
-}
-
-.slick-dots li {
-    margin: 0 0 !important;
-}
-
-.icons-carousel .slick-dots .slick-active button::before {
-    color: #EE5A2D !important;
+.graduates .arrow .prev {
+    margin-left: 50%;
 }
 
 .grad-img {
@@ -397,8 +425,4 @@ thead th {
 #program-info .table th,
 .table td {
     padding: 20px 65px 20px 65px;
-}
-
-.slick-track {
-    display: flex;
 }

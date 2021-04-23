@@ -5,7 +5,6 @@ import Main from "Components/Main/Main.jsx";
 import Footer from "Components/Footer/Footer.jsx";
 import "./App.css";
 
-
 const App = () => (
     <>
         <Header />

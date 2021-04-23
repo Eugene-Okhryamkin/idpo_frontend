@@ -22,7 +22,8 @@ module.exports = {
             Containers: path.resolve(__dirname, "src/containers"),
             Reducers: path.resolve(__dirname, "src/reducers"),
             Actions: path.resolve(__dirname, "src/actions"),
-            Pages: path.resolve(__dirname, "src/pages")
+            Pages: path.resolve(__dirname, "src/pages"),
+            Pic: path.resolve(__dirname, "src/pic")
         }
     },
 
@@ -31,6 +32,13 @@ module.exports = {
             {
                 test: /\.(jsx|js)$/,
                 use: ["babel-loader", "eslint-loader"]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: "file-loader",
+                options: {
+                    name: `pic/[name].[ext]`
+                }
             },
             {
                 test: /\.(sass|css)$/,

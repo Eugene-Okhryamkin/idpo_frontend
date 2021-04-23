@@ -7,6 +7,7 @@ import LogosSection from "Pages/Main/sections/LogoSection/LogosSection.jsx";
 import GraduatesSection from "Pages/Main/sections/GraduatesSection/GraduatesSection.jsx";
 import InfographicsSection from "Pages/Main/sections/InfographicsSection/InfographicsSection.jsx";
 import ManagersSection from "Pages/Main/sections/ManagersSection/ManagersSection.jsx";
+import PreFooter from "Pages/Main/sections/PreFooter/PreFooter.jsx";
 
 const MainPage = () => (
     <>
@@ -18,6 +19,7 @@ const MainPage = () => (
         <GraduatesSection />
         <InfographicsSection />
         <ManagersSection />
+        <PreFooter />
     </>
 );
 

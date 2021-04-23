@@ -1,35 +1,39 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 // import {NavLink} from "react-router-dom";
 import {setId} from "Actions/getInfoByIDAction.js";
 import { connect } from "react-redux";
 import propTypes from "prop-types";
 import {useHistory} from "react-router";
+import {getLearnData} from "Actions/getLearnTableData.js";
 
-const mapDispatchToProps = dispatch => {
-    return {
-        setId: id => dispatch(setId(id))
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    setId: id => dispatch(setId(id)),
+    getLearnData: () => dispatch(getLearnData())
+});
+
+const mapStateToProps = state => ({
+    learnData: state.learn.learnData,
+    storeRoute: state.learnRoute.route
+});
 
 const LearnTableContainer = props => {
-    const [learnData, setLearnData] = useState([]);
-    const { setId } = props;
+
+    const { setId , getLearnData, learnData } = props;
     const history = useHistory();
 
     useEffect(() => {
-        async function fetchData() {
-            let response = await fetch("http://194.67.116.27:8080/api/get_program_list");
-            response = await response.json();
-            setLearnData(response);
-        }
-
-        fetchData();
-    }, [])
+        getLearnData();
+    }, [] )
 
     const setInfoByID = id => {
         setId(id);
         history.push(`info/${id}`);
     }
+
+    // const sortInfo = () => {
+    //     console.log(route);
+    //     getLearnData(route);
+    // }
 
     const renderTable = () => {
         if(learnData.length) {
@@ -57,7 +61,10 @@ const LearnTableContainer = props => {
 };
 
 LearnTableContainer.propTypes = {
-    setId: propTypes.func.isRequired
+    setId: propTypes.func.isRequired,
+    getLearnData: propTypes.func.isRequired,
+    learnData: propTypes.array.isRequired,
+    storeRoute: propTypes.string
 }
 
-export default connect(null, mapDispatchToProps)(LearnTableContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LearnTableContainer);

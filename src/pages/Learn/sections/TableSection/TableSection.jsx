@@ -6,12 +6,12 @@ const TableSection = () => (
         <div className="table-section">
             <table className="table table-hover">
                 <thead>
-                <tr>
-                    <th scope="col">Группа направления</th>
-                    <th scope="col">Программа</th>
-                    <th scope="col">Форма обучения</th>
-                    <th scope="col">Продолжительность</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Группа направления</th>
+                        <th scope="col">Программа</th>
+                        <th scope="col">Форма обучения</th>
+                        <th scope="col">Продолжительность</th>
+                    </tr>
                 </thead>
                 <LearnTableContainer />
             </table>
