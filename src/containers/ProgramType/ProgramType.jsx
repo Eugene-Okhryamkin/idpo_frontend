@@ -50,7 +50,6 @@ const ProgramType = props => {
     }, [])
 
     const renderProgramLinks = () => {
-        //<li key={index} onClick={(e) => updateData(e, item.id)}><a className="" href="">{item.name}</a></li>
         return programTypeLinks.map((item, index) => {
             if(Object.keys(parent).length) {
                 if(Object.keys(item.children).length) {
@@ -86,27 +85,6 @@ const ProgramType = props => {
             <div className="dropdown-menu" aria-labelledby="dropdownMenuLink3">
                 <ul>
                     {renderProgramLinks()}
-                    {/*<li className="dropdown-submenu">*/}
-                    {/*    <a href="#" className="" data-toggle="dropdown" role="button" aria-haspopup="true"*/}
-                    {/*       aria-expanded="true"> <span className="nav-label">Общеобразовательные</span> <span*/}
-                    {/*        className="caret"></span></a>*/}
-
-                    {/*    <ul className="dropdown-menu">*/}
-                    {/*        <li><a href="">Повышение квалификации</a></li>*/}
-                    {/*        <li><a href="">Профессиональная переподготовка без присвоения квалификации</a></li>*/}
-                    {/*        <li><a href="">Профессиональная переподготовка с присвоением квалификации</a></li>*/}
-                    {/*    </ul>*/}
-                    {/*</li>*/}
-                    {/*<li className="dropdown-submenu">*/}
-                    {/*    <a href="#" className="" data-toggle="dropdown" role="button" aria-haspopup="true"*/}
-                    {/*       aria-expanded="true"> <span className="nav-label">Профессиональные</span> <span*/}
-                    {/*        className="caret"></span></a>*/}
-                    {/*    <ul className="dropdown-menu">*/}
-                    {/*        <li><a href="">Повышение квалификации</a></li>*/}
-                    {/*        <li><a href="">Профессиональная переподготовка без присвоения квалификации</a></li>*/}
-                    {/*        <li><a href="">Профессиональная переподготовка с присвоением квалификации</a></li>*/}
-                    {/*    </ul>*/}
-                    {/*</li>*/}
                 </ul>
             </div>
         </div>
