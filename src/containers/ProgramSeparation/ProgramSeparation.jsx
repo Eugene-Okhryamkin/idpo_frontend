@@ -45,7 +45,7 @@ const ProgramSeparation = props => {
     const updateData = (e, id) => {
         e.preventDefault();
         const { getLearnData } = props;
-        getLearnData(`?programSeparation=${id}`);
+        getLearnData(`?programSeparationId=${id}`);
     }
 
     const renderProgramLinks = () => {

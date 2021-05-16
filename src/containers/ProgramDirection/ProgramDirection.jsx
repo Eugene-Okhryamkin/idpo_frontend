@@ -45,7 +45,7 @@ const ProgramDirection = props => {
     const updateData = (e, id) => {
         e.preventDefault();
         const { getLearnData } = props;
-        getLearnData(`?programDirection=${id}`);
+        getLearnData(`?programDirectionId=${id}`);
     }
 
     const renderProgramLinks = () => {

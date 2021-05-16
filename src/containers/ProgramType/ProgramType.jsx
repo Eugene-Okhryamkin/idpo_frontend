@@ -34,7 +34,7 @@ const ProgramType = props => {
     const updateData = (e, id) => {
         e.preventDefault();
         const { getLearnData } = props;
-        getLearnData(`?programType=${id}`);
+        getLearnData(`?programTypeId=${id}`);
     }
 
     useEffect(() => {

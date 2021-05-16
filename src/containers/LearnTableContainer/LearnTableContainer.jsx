@@ -37,6 +37,7 @@ const LearnTableContainer = props => {
 
     const renderTable = () => {
         if(learnData.length) {
+            console.log(learnData);
             return learnData.map((item, index) => {
                 return (
                     <tr key={index}>
