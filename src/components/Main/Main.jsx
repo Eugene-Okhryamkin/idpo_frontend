@@ -7,9 +7,9 @@ import InfoPage from "Pages/Info/InfoPage.jsx";
 const Main = () => (
     <main>
          <Switch>
-             <Route exact path="/" component={MainPage}></Route>
-             <Route path="/learn" component={LearnPage}></Route>
-             <Route path="/info/:id" component={InfoPage}></Route>
+             <Route  path="/main/" component={MainPage} exact />
+             <Route  path="/main/learn" component={LearnPage}  />
+             <Route  path="/main/info/:id" component={InfoPage}  />
          </Switch>
     </main>
 );

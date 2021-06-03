@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "Components/ImageSlider/ImageSlider.jsx";
+import "./GraduatesSection.css";
 // import data from "../../../../data/sliderData.json";
 
 
@@ -49,7 +50,7 @@ const GraduatesSection = () => {
                 {/*        <p className="grad-desc text-muted">Благодаря спецгруппе поступил в СПбГУ в англоязычную*/}
                 {/*            магистратуру, сейчас является студентом Болонского университета в Италии </p>*/}
                 {/*</div>*/}
-                <ImageSlider />
+                <ImageSlider  />
 
             </div>
 

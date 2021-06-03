@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 import App from "./containers/App.jsx";
 import { store } from "./store/store.js";
 import { Provider } from "react-redux";
-import { Router } from "react-router";
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory } from "history";
+// import Admin from "Pages/Admin/Admin.jsx";
+import {BrowserRouter} from "react-router-dom";
 
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 
 ReactDOM.render(
     <Provider store={ store }>
-        <Router history={ history }>
+        <BrowserRouter>
             <App />
-        </Router>
+        </BrowserRouter>
     </Provider>,
     document.getElementById("root")
 );

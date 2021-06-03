@@ -1,0 +1,59 @@
+body {
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #eee;
+    text-align: right;
+    padding-right: 20px;
+    margin: 0;
+}
+
+header a {
+    color: #555;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #EE5A2D
+}
+
+.row {
+    margin: 0;
+    height: 100%;
+}
+
+.nav-bar {
+    margin-right: 20px;
+    background-color: #eee;
+    padding: 30px 10px 30px 20px;
+    border-radius: 0 20px 20px 0;
+}
+
+a {
+    color: #000;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EE5A2D;
+    text-decoration: none;
+    /*background-color: #e5e5e5;*/
+}
+
+.content {
+    background-color: #eee;
+    padding: 30px 30px 30px 30px;
+    border-radius: 20px 0 0 20px;
+}
+
+
+/*-----------------------------tables css-----------------*/
+
+.c-table a:hover {
+    background-color: lightgray;
+}
