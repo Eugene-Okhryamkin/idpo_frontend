@@ -1,0 +1,95 @@
+body {
+    background-color: #f7f7f7;
+}
+
+
+/*-------log in button--------*/
+
+.log-in-btn {
+    width: 200px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #EE5A2D;
+    color: white;
+    text-transform: uppercase;
+}
+
+.log-in-btn:hover {
+    background-color: #555;
+    transition: .3s ease-in-out;
+}
+
+.del {
+    font-weight: 600;
+    color: #555;
+    background-color: none;
+    border: none;
+}
+
+
+/*ssssaaaaaaaasssssssssssssssssssss--------fields css*/
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin: 10px auto;
+    width: 60%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #222;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 2px;
+    border-image: linear-gradient(to right, #EE5A2D, #9b9b9b);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #EE5A2D;
+    font-weight: 700;
+}
+
+
+/* reset input */
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}

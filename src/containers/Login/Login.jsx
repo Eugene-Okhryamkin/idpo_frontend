@@ -1,48 +1,34 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
+import { connect } from "react-redux";
+import {login} from "Actions/authAction.js";
+import propTypes from "prop-types";
+import "./style-login.css";
 
-const Login = () => {
-    const [login, setLogin] = useState(null);
+const mapDispatchToProps = dispatch => ({
+    auth: userData => dispatch(login(userData))
+})
+
+const Login = props => {
+    const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
-
-    const auth = async (...data) => {
-        const reqData = {
-            username: data.login,
-            password: data.password
-        }
-
-        await fetch("http://194.67.116.27:8080/api/auth/login", {
-            method: "POST",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "POST",
-            body: JSON.stringify(reqData)
-        })
-            .then(res => localStorage.setItem("TOKEN", res.json()))
-    }
 
     const onBtnSubmit = e => {
         e.preventDefault();
-        auth(login, password);
+        const data = {username, password};
+        const { auth } = props;
+        auth(data);
     }
 
-    const onHandleLoginChange = e => setLogin(e.currentTarget);
-    const onHandlePasswordChange = e => setPassword(e.currentTarget);
+    const onHandleLoginChange = e => setUsername(e.currentTarget.value);
+    const onHandlePasswordChange = e => setPassword(e.currentTarget.value);
 
     const validate = () => {
-        if(login && password) {
+        if(username && password) {
             return true;
         }
 
         return false;
     }
-
-    const getAndSaveToken = async () => {
-       await fetch("http://194.67.116.27:8080/api/auth/login")
-            .then(res => localStorage.setItem("token", res.json()))
-    }
-
-    useEffect(() => {
-        getAndSaveToken();
-    }, [])
 
     return (
         <div className="container col-lg-5 mx-auto p-5 mt-5"
@@ -65,4 +51,8 @@ const Login = () => {
     )
 };
 
-export default Login;
+Login.propTypes = {
+    auth: propTypes.func.isRequired
+}
+
+export default connect(null, mapDispatchToProps)(Login);
