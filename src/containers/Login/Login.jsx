@@ -23,7 +23,7 @@ const Login = props => {
     const onHandlePasswordChange = e => setPassword(e.currentTarget.value);
 
     const validate = () => {
-        if(username && password) {
+        if(username) {
             return true;
         }
 

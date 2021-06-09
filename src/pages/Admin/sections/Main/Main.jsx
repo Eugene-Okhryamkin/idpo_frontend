@@ -1,7 +1,7 @@
 import React from "react";
 import AdminSidebar from "Containers/AdminSidebar/AdminSidebar.jsx";
 import { Switch, Route } from "react-router";
-import AdminUsers from "Pages/AdminUsers/AdminUsers.jsx";
+import AdminUsers from "Containers/AdminUsers/AdminUsers.jsx";
 import AdminCourses from "Pages/AdminCourses/AdminCourses.jsx";
 import AdminCategories from "Pages/AdminCategories/AdminCategories.jsx";
 
