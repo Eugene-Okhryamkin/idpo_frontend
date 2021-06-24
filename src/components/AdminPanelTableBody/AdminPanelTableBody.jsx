@@ -1,14 +1,23 @@
 import React from "react";
-import AdminUsersTableItem from "Containers/AdminUsersTableItem/AdminUsersTableItem.jsx";
 import propTypes from "prop-types";
 
 const AdminPanelTableBody = props => {
 
-
+    const getKeysOfObject = () => {
+        const { tableElements } = props;
+        return tableElements.forEach(item => {
+            return Object.keys(item);
+        });
+    }
 
     const renderElements = () => {
-        const { tableElements } = props;
-        return tableElements.map((item, index) => <AdminUsersTableItem cols={item} key={index} />);
+        const { tableElements, Component } = props;
+        console.log(Component);
+        const keys = getKeysOfObject();
+        if(tableElements != null) {
+            return tableElements.map((item) => <Component keys={keys} cols={item} key={item.id} />);
+        }
+
     }
 
     return (
@@ -22,6 +31,7 @@ const AdminPanelTableBody = props => {
 
 AdminPanelTableBody.propTypes = {
     tableElements: propTypes.array.isRequired,
+    Component: propTypes.func.isRequired
 }
 
 export default AdminPanelTableBody;

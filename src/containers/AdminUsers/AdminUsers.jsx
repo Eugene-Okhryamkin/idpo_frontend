@@ -5,6 +5,7 @@ import {getUsers} from "Actions/getUsersAction";
 import propTypes from "prop-types";
 import EditUser from "Pages/EditUser/EditUser.jsx";
 import AddUser from "Pages/AddUser/AddUser.jsx";
+import AdminUsersTableItem from "Containers/AdminUsersTableItem/AdminUsersTableItem.jsx";
 
 const mapStateToProps = state => ({
     users: state.users.users,
@@ -38,7 +39,7 @@ const AdminUsers = props => {
             return <AddUser />
         }
 
-        return <Table tableName="Пользователи" cols={tableCols}  tableElements={props.users} />
+        return <Table tableName="Пользователи" cols={tableCols}  tableElements={props.users} Component={AdminUsersTableItem}></Table>
     }
 
 

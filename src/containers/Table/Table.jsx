@@ -18,7 +18,7 @@ const Table = props => {
                     <FontAwesomeIcon icon={faPen} />
                 </p>
             </div>
-            <AdminPanelTableBody tableElements={props.tableElements} />
+            <AdminPanelTableBody tableElements={props.tableElements} Component={props.Component}/>
         </>
     )
 };
@@ -27,6 +27,7 @@ Table.propTypes = {
     tableName: propTypes.string.isRequired,
     tableElements: propTypes.array.isRequired,
     cols: propTypes.array.isRequired,
+    Component: propTypes.func.isRequired
 }
 
 export default Table;

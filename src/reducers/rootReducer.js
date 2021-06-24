@@ -7,6 +7,9 @@ import { usersReducer } from "Reducers/usersReducer";
 import {editReducer} from "Reducers/openEditReducer";
 import {getUser} from "Reducers/getUserReducer";
 import {addReducer} from "Reducers/openAddReducer";
+import {coursesReducer} from "Reducers/getCoursesReducer";
+import {getCourse} from "Reducers/getCourseReducer";
+import {getCategory} from "Reducers/getCategoryReducer";
 
 export const rootReducer = combineReducers ({
     info: infoReducer,
@@ -16,5 +19,8 @@ export const rootReducer = combineReducers ({
     users: usersReducer,
     edit: editReducer,
     getUser: getUser,
-    add: addReducer
+    add: addReducer,
+    courses: coursesReducer,
+    getCourse: getCourse,
+    getCategory: getCategory
 });
