@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 // import Admin from "Pages/Admin/Admin.jsx";
 import {BrowserRouter} from "react-router-dom";
 
+
 // const history = createBrowserHistory();
 
 ReactDOM.render(
