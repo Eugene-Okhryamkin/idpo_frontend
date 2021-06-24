@@ -28,7 +28,7 @@ const AdminCoursesTableItem = props => {
     const renderItem = () => {
         return (
             <>
-                <a className="d-block p-4 d-flex" href="edit-course.html"
+                <a className="d-block p-4 d-flex"
                    style={{alignItems: "center", justifyContent: "space-between"}}>
                     <span className="float-start">{props.cols.name}</span> <span className="ml-5 float-end">{props.cols.formTraining}</span>
                     <span className="ml-5 float-end">Статус</span> <FontAwesomeIcon icon={faPen} onClick={onHandleOpen} />
