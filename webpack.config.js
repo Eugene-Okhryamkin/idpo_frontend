@@ -34,7 +34,7 @@ module.exports = {
                 use: ["babel-loader", "eslint-loader"]
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|svg|jpe?g|gif)$/i,
                 loader: "file-loader",
                 options: {
                     name: `pic/[name].[ext]`

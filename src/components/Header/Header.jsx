@@ -1,10 +1,11 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import img from "Pic/Group 11.svg";
 
 const Header = () => (
     <header className="main-header bg-white">
         <ul className="head">
-            <li className="logo"><img src="" /></li>
+            <li className="logo"><img src={img} /></li>
             <li className="mx-5">ИДПО ВГУ</li>
         </ul>
         <ul className="head">
